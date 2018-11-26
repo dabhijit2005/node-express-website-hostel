@@ -7,20 +7,23 @@ app.use(serveStatic('views/'))
 
 app.set('view engine', 'ejs');
 
-app.get('/' , function(req,res){
+app.get('/home' , function(req,res){
     
     res.render('home');
     
 });
 
 
-app.post('/formspree.io/test@gmail.com' , function(req,res) {
+app.post('/formspree.io/pranitdubey@gmail.com' , function(req,res) {
         
       
         
     });
 
-app.listen(80);
+app.listen(process.env.PORT , process.env.IP , function(req,res){
+    
+    console.log('server has started');
+});
     
     
    
